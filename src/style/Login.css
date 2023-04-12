@@ -1,0 +1,159 @@
+:root {
+    --half-grad: linear-gradient(
+        45deg,
+        #d3e0ee,
+        #acbfdb,
+        #6c92cc,
+        #4482d7);
+    --gradiet: linear-gradient(
+        45deg,
+        #d3e0ee,
+        #acbfdb,
+        #6c92cc,
+        #4482d7,
+        #4561a9,
+        #234ea1);
+}
+
+* {
+    margin: auto;
+    box-sizing: border-box;
+    font-family: 'custonFonts';
+}
+
+@font-face {
+    font-family: 'custonFonts';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+.container {
+    margin: auto;
+    background-image: var(--half-grad);
+    background-position: left;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 400%;
+
+    animation: bg-animation 20s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+    100% {
+        background-position: right;
+    }
+}
+
+h1 {
+    color: transparent;
+
+    font-size: 2.5em;
+    background-image: var(--gradiet);
+    background-size: 200%;
+    background-position: right;
+    background-clip: text;
+}
+
+.login-card {
+    width: 25em;
+    height: auto;
+    gap: 35px;
+    padding: 40px 10px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    /* box-shadow: 0 0.1em 1.2em rgb(156, 156, 156); */
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 1.5em;
+    width: 100%;
+    border-radius: 0.5em;
+    padding: 1.2em;
+}
+
+input:focus {
+    outline-color: #6c92cc;
+}
+
+.button {
+    border: 0px;
+    width: 40%;
+    color: white;
+    cursor: pointer;
+    height: 3em;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradiet);
+    border-radius: 1.5em;
+    background-size: 400%;
+    background-position: left;
+    transition: 1s;
+}
+
+.button:hover,
+.button:focus {
+    background-position: right;
+    transform: scale(1.125);
+}
+
+.link-forgot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.link-forgot a{
+    position: absolute;
+    font-size: 15px;
+    font-weight: 700;
+    color: #234ea1;
+    text-decoration: none;
+    transition: color 0.5s
+}
+
+
+.link-forgot a:hover,
+.link-forgot a:focus,
+.link-forgot a:active {
+    color: #acbfdb
+}
+
+.create-account-tag {
+    display: flex;
+    align-items: center;
+    color: #234ea1;
+    justify-content: center;
+}
+
+.create-account-tag a{
+    font-size: 15px;
+    font-weight: 700;
+    color: #234ea1;
+    text-decoration: none;
+    transition: color 0.5s
+}
+
+.create-account-tag a:hover,
+.create-account-tag a:focus,
+.create-account-tag a:active {
+    color: #acbfdb
+}
